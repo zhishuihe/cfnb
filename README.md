@@ -328,7 +328,7 @@ python3 main.py
 | `CF_PROXIED` | `boolean` | `false` | 是否启用 Cloudflare CDN 代理 |
 | `CF_DNS_CONNECT_TIMEOUT` | `int` | `3` | Cloudflare API 连接超时（秒） |
 | `CF_DNS_READ_TIMEOUT` | `int` | `3` | Cloudflare API 读取超时（秒） |
-| `DNS_RECORD_TYPE` | `string` | `"A"` | DNS 记录类型（A 或 AAAA） |
+| `DNS_RECORD_TYPE` | `string` | `"TXT"` | DNS 记录类型（A 或 TXT） |
 
 > 💡 若不需要 DNS 更新，将 `CF_ENABLED` 设为 `false` 即可。
 

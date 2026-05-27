@@ -75,8 +75,8 @@
     "_comment_CF_DNS_CONNECT_TIMEOUT": "Cloudflare API 连接超时（秒）",
     "CF_DNS_READ_TIMEOUT": 3,
     "_comment_CF_DNS_READ_TIMEOUT": "Cloudflare API 读取超时（秒）",
-    "DNS_RECORD_TYPE": "A",
-    "_comment_DNS_RECORD_TYPE": "DNS 记录类型（A 或 AAAA）",
+    "DNS_RECORD_TYPE": "TXT",
+    "_comment_DNS_RECORD_TYPE": "DNS 记录类型（A 或 TXT）",
 
     "ADDITIONAL_SOURCES": [
         {
