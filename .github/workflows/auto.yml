@@ -1,0 +1,26 @@
+name: Cloudflare IP 优选工具
+
+on:
+  workflow_dispatch: # 允许你手动点击运行
+  schedule:
+    - cron: '0 22 * * *' # 每天早上 6 点自动运行一次（UTC 22点）
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 签出代码
+        uses: actions/checkout@v4
+
+      - name: 设置 Python 环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: 安装依赖并执行测速
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
+        run: |
+          if [ -f "requirements.txt" ]; then pip install -r requirements.txt; fi
+          python main.py
